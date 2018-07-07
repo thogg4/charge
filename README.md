@@ -1,24 +1,19 @@
-# README
+# Charge
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Setup
+Creating a subscription requires a product name be passed in.
+Run `bundle exec rails db:seed` to seed a product with the name of `sample`
 
-Things you may want to cover:
+## Run app
+Run app in the standard rails way with `bundle exec rails server`
 
-* Ruby version
+## Run billing gateway
+I used the provided billing gateway and included it in the root of this project.
+It can be run using `ruby billing_gateway.rb` it has a dependency on sinatra.
 
-* System dependencies
+## Make Requests
+Make requests to the subscriptions create endpoint at `localhost:3000/subscriptions`
+The request must be a post.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Run tests
+Tests can be run with the standard rails command: `bundle exec rails test`
