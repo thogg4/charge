@@ -14,6 +14,19 @@ It can be run using `ruby billing_gateway.rb` it has a dependency on sinatra.
 ## Make Requests
 Make requests to the subscriptions create endpoint at `localhost:3000/subscriptions`
 The request must be a post.
+Parameters are `product` (product name), `number` (card number), `name` (name on card), `exp_month` and `exp_year`
+
+Example:
+
+```
+{
+  "product": "sample",
+  "number": "4111111111111111",
+  "name": "John Doe",
+  "exp_month": "10",
+  "exp_year": "2020"
+}
+```
 
 ## Run tests
 Tests can be run with the standard rails command: `bundle exec rails test`
